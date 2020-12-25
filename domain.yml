@@ -1,0 +1,84 @@
+version: '2.0'
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+  
+intents:
+- trigger_action_news
+- greet
+- bot_challenge
+- affirm
+- goodbye
+- deny
+- mood_great
+- mood_unhappy
+- bot_name
+
+entities:
+- querynews
+
+slots:
+  querynews:
+    type: text
+    influence_conversation: true
+
+responses:
+
+  utter_greet:
+  - text: ¡Hey! ¿Qué tal? ¿Puedo ayudarte en algo?
+  - text: ¡Hola hola, caracola! 
+  - text: Hola, holita :D
+
+  utter_cheer_up:
+  - text: Esto te animará
+    image: https://i.imgur.com/nGF1K8f.jpg
+    
+  utter_did_that_help:
+  - text: ¿Te ayudó?
+  - text: ¿Puedo hacer algo más por ti?
+
+  utter_happy:
+  - text: ¡Me alegra que estés feliz!
+  - text: :D
+  - text: :)
+  - text: ;)
+  - text: Te noto alegre :D
+
+  utter_goodbye:
+  - text: Hasta pronto
+  - text: Sayonara...
+  - text: ¡Hasta la vista!
+  - text: ¡Nos vemos!
+
+  utter_iamabot:
+  - text: Soy un bot, ¿mola?
+
+  utter_anything_else:
+  - text: ¿Puedo ayudarte en algo más?
+  - text: ¿Qué más necesitas?
+  - text: ¿Alguna otra cosa?
+
+  utter_out_of_scope:
+  - text: Ups... no sé hacer eso... :S
+  - text: Vaya... eso no está en mis neuronas...
+  - text: ¿Me haces un croquis? Eso no está en mi base... :|
+
+  utter_default_fallback:
+  - text: Ups... no lo he entendido. ¿Puedes decirlo de otra manera? :O
+  - text: Vaya... no me he enterado de nada... ¡Qué? :S
+  - text: No... no... ni idea de lo que has dicho, oye...
+
+  utter_bot_name:
+  - text: Soy Marvin :)
+
+actions:
+- utter_bot_name
+- action_get_news
+
+- utter_anything_else
+
+- utter_default_fallback
+
+- utter_greet
+- utter_happy
+- utter_iamabot

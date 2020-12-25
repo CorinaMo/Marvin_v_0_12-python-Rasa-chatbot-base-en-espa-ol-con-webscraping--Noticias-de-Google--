@@ -1,0 +1,29 @@
+version: "2.0"
+
+rules:
+
+- rule: Decir adiós cada vez que el usuario dice adiós
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Decir que es un robot cada vez que el usuario le reta
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: out-of-scope
+  steps:
+  - intent: out_of_scope
+  - action: utter_out_of_scope
+
+- rule: Marvin no lo ha entendido
+  steps:
+  - intent: nlu_fallback
+  - action: utter_default_fallback
+
+- rule: test action news
+  steps:
+  - intent: trigger_action_news
+  - action: action_get_news
+  - action: utter_anything_else

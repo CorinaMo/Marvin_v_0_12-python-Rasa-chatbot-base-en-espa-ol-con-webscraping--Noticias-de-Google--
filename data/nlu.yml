@@ -1,0 +1,90 @@
+version: "2.0"
+nlu:
+- intent: greet
+  examples: |
+    - hola
+    - buenos días
+    - buenas tardes
+    - hey
+    - hola, ¿qué tal?
+    - Hola, que tal?
+
+- intent: goodbye
+  examples: |
+    - adiós
+    - nos vemos
+    - hasta luego
+    - ciao
+    - chao
+    - hasta pronto
+    - Hasta la próxima
+    - Hasta la vista
+
+- intent: affirm
+  examples: |
+    - sí
+    - exacto
+    - eso es
+    - cierto
+    - va a ser que sí
+
+- intent: deny
+  examples: |
+    - no
+    - no, gracias
+    - nada
+    - para nada
+
+- intent: mood_great
+  examples: |
+    - genial
+    - ¡Qué guay!
+    - qué bien
+    - estoy bien
+    - soy feliz
+
+- intent: mood_unhappy
+  examples: |
+    - estoy triste
+    - triste
+    - muy triste
+    - no ando muy bien
+
+- intent: bot_challenge
+  examples: |
+    - ¿eres un bot?
+    - ¿eres humano?
+    - ¿estoy hablando con un bot?
+    - ¿estoy hablando con un humano?
+    - eres un robot?
+
+- intent: out_of_scope
+  examples: |
+    - ¿Tienes comida?
+    - Da una voltereta
+    - pásame un refresco
+
+- intent: trigger_action_news
+  examples: |
+    - Me pones noticias?
+    - Ponme noticias
+    - Dime noticias
+    - Cuéntame algunas noticias
+    - Dame las noticias
+    - ¿Qué hay en las noticias?
+    - ¿Hay noticias sobre [moda](querynews)?
+    - Dime noticias de [deportes](querynews)
+    - Cuéntame algunas noticias sobre el [coronavirus](querynews)
+    - Dame noticias de [cine](querynews)
+    - enséñame noticias sobre [política](querynews)
+    - muestra noticias de [política](querynews)
+    - quiero noticias de [economía](querynews)
+    - noticias sobre [medicina](querynews)
+    
+- intent: bot_name
+  examples: |
+    - ¿Cómo te llamas?
+    - Cuál es tu nombre
+    - ¿Tienes nombre?
+    - Y tú te llamas...
+    
