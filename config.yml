@@ -22,7 +22,7 @@ pipeline:
   - name: "EntitySynonymMapper"
   - name: "ResponseSelector"
     epochs: 100
-  - name: FallbackClassifier
+  - name: "FallbackClassifier"
     threshold: 0.7
 
 # Configuration for Rasa Core.

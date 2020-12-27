@@ -2,14 +2,14 @@ version: "2.0"
 
 stories:
 
-- story: happy path
+- story: happy_path
   steps:
   - intent: greet
   - action: utter_greet
   - intent: mood_great
   - action: utter_happy
 
-- story: sad path 1
+- story: sad_path 1
   steps:
   - intent: greet
   - action: utter_greet
@@ -19,7 +19,7 @@ stories:
   - intent: affirm
   - action: utter_happy
 
-- story: sad path 2
+- story: sad_path 2
   steps:
   - intent: mood_unhappy
   - action: utter_cheer_up
@@ -36,35 +36,12 @@ stories:
   - intent: affirm
   - action: utter_happy
 
-- story: test action news
+- story: test_action_news
   steps:
   - intent: trigger_action_news
   - action: action_get_news
   - action: utter_anything_else
   
-- story: interactive_story_1
-  steps:
-  - intent: trigger_action_news
-    entities:
-    - querynews: política
-  - slot_was_set:
-    - querynews: política
-  - action: action_get_news
-  - action: utter_anything_else
-  - intent: trigger_action_news
-    entities:
-    - querynews: política
-  - slot_was_set:
-    - querynews: política
-  - action: action_get_news
-  - action: utter_anything_else
-  - intent: trigger_action_news
-    entities:
-    - querynews: economía
-  - slot_was_set:
-    - querynews: economía
-  - action: action_get_news
-  - action: utter_anything_else
 
 - story: interactive_story_1
   steps:
@@ -72,3 +49,20 @@ stories:
   - action: utter_greet
   - intent: bot_name
   - action: utter_bot_name
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_mood
+  - action: utter_ask_mood
+  - intent: trigger_action_news
+    entities:
+    - querynews: mundo
+  - slot_was_set:
+    - querynews: mundo
+  - action: action_get_news
+  - action: utter_anything_else
+  - intent: thanks
+  - action: your_welcome
+

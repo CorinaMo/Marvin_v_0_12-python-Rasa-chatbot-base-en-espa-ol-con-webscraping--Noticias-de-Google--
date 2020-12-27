@@ -17,13 +17,17 @@ rules:
   - intent: out_of_scope
   - action: utter_out_of_scope
 
-- rule: Marvin no lo ha entendido
+
+- rule: Marvin_no_lo_ha_entendido
   steps:
   - intent: nlu_fallback
-  - action: utter_default_fallback
+  - action: utter_ask_rephrase
+
 
 - rule: test action news
   steps:
   - intent: trigger_action_news
   - action: action_get_news
   - action: utter_anything_else
+
+

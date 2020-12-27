@@ -16,3 +16,11 @@
 
 # Para la API de noticias de Google:
     ### pip3 install beautifulsoup4
+
+
+## Entrena el modelo con:
+    ### rasa train
+## corre las acciones en una terminal del editor:
+    ### rasa run actions
+## para hablar con el bot:
+    ### rasa shell

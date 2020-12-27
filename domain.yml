@@ -13,17 +13,19 @@ intents:
 - mood_great
 - mood_unhappy
 - bot_name
+- out_of_scope
+- ask_mood
+- thanks
 
 entities:
 - querynews
 
 slots:
-  querynews:
+  querynews:   
     type: text
     influence_conversation: true
 
 responses:
-
   utter_greet:
   - text: ¡Hey! ¿Qué tal? ¿Puedo ayudarte en algo?
   - text: ¡Hola hola, caracola! 
@@ -61,24 +63,34 @@ responses:
   utter_out_of_scope:
   - text: Ups... no sé hacer eso... :S
   - text: Vaya... eso no está en mis neuronas...
-  - text: ¿Me haces un croquis? Eso no está en mi base... :|
 
-  utter_default_fallback:
+  utter_ask_rephrase:
   - text: Ups... no lo he entendido. ¿Puedes decirlo de otra manera? :O
   - text: Vaya... no me he enterado de nada... ¡Qué? :S
-  - text: No... no... ni idea de lo que has dicho, oye...
-
+  
   utter_bot_name:
   - text: Soy Marvin :)
+
+  your_welcome:
+  - text: Para eso estamos :D
+  - text: De nada :) ¿Algo más?
+
+  utter_ask_mood:
+  - text: Muy bien, gracias :D
+  - text: Ya sabes, aquí... y allí, y allá... no me aburro demasiado :P
+
+  utter_default:
+  - text: ¿Me estás hablando en chino o algo así?
+  - text: Vaya... no me he enterado de nada... ¡Qué? :S
+  
 
 actions:
 - utter_bot_name
 - action_get_news
-
 - utter_anything_else
-
-- utter_default_fallback
-
 - utter_greet
 - utter_happy
 - utter_iamabot
+- utter_out_of_scope
+- utter_ask_mood
+- your_welcome

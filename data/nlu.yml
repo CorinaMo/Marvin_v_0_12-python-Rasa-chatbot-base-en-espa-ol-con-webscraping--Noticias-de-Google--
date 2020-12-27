@@ -8,7 +8,7 @@ nlu:
     - hey
     - hola, ¿qué tal?
     - Hola, que tal?
-
+    - hola!
 - intent: goodbye
   examples: |
     - adiós
@@ -19,7 +19,6 @@ nlu:
     - hasta pronto
     - Hasta la próxima
     - Hasta la vista
-
 - intent: affirm
   examples: |
     - sí
@@ -27,14 +26,12 @@ nlu:
     - eso es
     - cierto
     - va a ser que sí
-
 - intent: deny
   examples: |
     - no
     - no, gracias
     - nada
     - para nada
-
 - intent: mood_great
   examples: |
     - genial
@@ -42,14 +39,20 @@ nlu:
     - qué bien
     - estoy bien
     - soy feliz
-
+    - estoy contento
+    - cómo mola
+    - mola mucho
+    - ¡yuju!
 - intent: mood_unhappy
   examples: |
     - estoy triste
     - triste
     - muy triste
     - no ando muy bien
-
+    - no me siento bien
+    - no estoy muy allá
+    - me siento raro
+    - me noto tenso
 - intent: bot_challenge
   examples: |
     - ¿eres un bot?
@@ -57,13 +60,13 @@ nlu:
     - ¿estoy hablando con un bot?
     - ¿estoy hablando con un humano?
     - eres un robot?
-
 - intent: out_of_scope
   examples: |
     - ¿Tienes comida?
     - Da una voltereta
     - pásame un refresco
 
+############################### NOTICIAS GOOGLE ###############################
 - intent: trigger_action_news
   examples: |
     - Me pones noticias?
@@ -76,15 +79,25 @@ nlu:
     - Dime noticias de [deportes](querynews)
     - Cuéntame algunas noticias sobre el [coronavirus](querynews)
     - Dame noticias de [cine](querynews)
-    - enséñame noticias sobre [política](querynews)
-    - muestra noticias de [política](querynews)
-    - quiero noticias de [economía](querynews)
+    - enséñame noticias sobre [politica](querynews)
+    - muestra noticias de [politica](querynews)
+    - quiero noticias de [economia](querynews)
     - noticias sobre [medicina](querynews)
-    
+    - tienes noticias sobre el [mundo](querynews)?
+
 - intent: bot_name
   examples: |
     - ¿Cómo te llamas?
     - Cuál es tu nombre
     - ¿Tienes nombre?
     - Y tú te llamas...
-    
+    - Quién eres
+
+- intent: ask_mood
+  examples: |
+    - cómo estás
+    - ¿estás bien?
+- intent: thanks
+  examples: |
+    - gracias
+    - gracias, Marvin
